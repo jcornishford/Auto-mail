@@ -1,5 +1,6 @@
 
 import smtplib
+import base64
 import sys
 
 
