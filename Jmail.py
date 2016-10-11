@@ -1,7 +1,7 @@
 
 import smtplib
 import base64
-import sys
+
 
 
 #Receiver
@@ -11,8 +11,8 @@ fro = email
 
 
 # Google SMTP Server Login Information
-email = 'jayf4640@gmail.com'
-pswd = 'binarysearchtree'
+email = base64.b4decode('amF5ZjQ2NDBAZ21haWwuY29t')
+pswd = base64.b4decode('YmluYXJ5c2VhcmNodHJlZQ==')
  
 #Email message variable to send
 message = 'Hello, my name is Jeremy this is a automate message, to test out a script, please acknowledge that you received it \n Thank you, \n Jeremy Ford'
@@ -26,7 +26,7 @@ try:
 	#Identify myself to  the server(4 way handshake)
 	smtobj.ehlo()
 	smtpobj.starttls()
-	smtpobj.Login(email, pswd)
+	smtpobj.Login(email,pswd)
 	smtobj.quit() 
 except:
 	print "Server could'nt authenticate the client"
